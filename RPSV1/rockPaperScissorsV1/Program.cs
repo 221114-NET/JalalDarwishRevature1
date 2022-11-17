@@ -13,7 +13,7 @@ class Program
         string? userInput = "", exit ="";
         bool continuePlaying = true;
         int computerChoice = 0, userChoice = 0;
-        Choices choices;
+        Choices choices = Choices.ROCK;
 
         // Can be used to get Enum represtation of an integer
         // Enum.TryParse(1.ToString(), out choices);
@@ -51,7 +51,7 @@ class Program
                 Console.WriteLine("You lose!");
             }
 
-            Console.WriteLine("press e to exit, or any other key to continue playing");
+            Console.WriteLine("Enter e to exit, or any other key to continue playing");
             exit = Console.ReadLine();
             if(exit == "e")
             {
