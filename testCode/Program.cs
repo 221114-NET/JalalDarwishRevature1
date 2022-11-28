@@ -5,6 +5,17 @@ class Program
     {
         string emptyTest = "";
         TestStuff.EmptyTest(emptyTest);
+
+
+        ExpressionTest? etTest = new ExpressionTest(1);
+        Console.WriteLine(etTest.ETNumber);
+        ExpressionTest? plusOverloadTest = new ExpressionTest(2);
+        plusOverloadTest = etTest + plusOverloadTest;
+        Console.WriteLine(plusOverloadTest.ETNumber);
+        // ForceGarbage.ForceGC();
+        // GC.WaitForPendingFinalizers();
+        // Console.ReadLine();
+
     }
 }
 
