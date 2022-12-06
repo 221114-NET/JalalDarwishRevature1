@@ -35,7 +35,7 @@
     SELECT COUNT(dbo.PlaylistTrack.PlaylistId) AS 'Number of Tracks', dbo.Playlist.Name FROM dbo.PlaylistTrack INNER JOIN dbo.Playlist ON dbo.PlaylistTrack.PlaylistId = dbo.Playlist.PlaylistId GROUP BY dbo.Playlist.Name ORDER BY 'Number of Tracks' DESC;
 
 -- Which sales agent made the most sales in 2009?
-    --SELECT MAX(invoices) FROM (SELECT COUNT(dbo.Invoice.InvoiceId) AS 'invoices' FROM dbo.Invoice GROUP BY dbo.Invoice.CustomerId);
+	/*still need to display name*/SELECT MAX(counts) FROM (SELECT FirstName, LastName, COUNT(*) counts FROM (SELECT dbo.Employee.FirstName, dbo.Employee.LastName FROM dbo.Invoice INNER JOIN dbo.Customer ON dbo.Invoice.CustomerId = dbo.Customer.CustomerId INNER JOIN dbo.Employee ON dbo.Customer.SupportRepId = dbo.Employee.EmployeeId) as sales GROUP BY FirstName, LastName) AS x;
 
 -- How many customers are assigned to each sales agent?
 
