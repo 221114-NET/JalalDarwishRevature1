@@ -1,0 +1,30 @@
+public static List<int> gradingStudents(List<int> grades)
+    {
+        //Making list that will store the rounded grades
+        List<int> roundedGrades = new List<int>();
+        //Declaring a variable that will store how far from the next multiple of 5
+        int distanceToFive = 0;
+        //Loop to iterate through the entire grades list and add each finalized grade to roundedGrades
+        foreach(int g in grades)
+        {
+            //Check if current grade is high enough to be rounded
+            if(g>37)
+            {
+                //Calculate how far from next multiple of 5 
+                distanceToFive = (5-(g%5));
+                //Check if the grade follows the rounding rules of being less than 3 away from next multiple of 5
+                if(distanceToFive < 3)
+                {
+                    //"round" to next multiple by adding the difference and storing in the list. Doing it this way to avoid changing the values in the initial list
+                    roundedGrades.Add(g+distanceToFive);
+                    continue;
+                }
+            }
+            //If grade is too low too be rounded, add into list as is     
+            roundedGrades.Add(g);
+        }
+        
+        
+        
+        return roundedGrades;
+    }
