@@ -1,0 +1,29 @@
+public static void countApplesAndOranges(int s, int t, int a, int b, List<int> apples, List<int> oranges)
+    {
+            //Declare variable to store number of fruits that actually land on house
+            int numApples = 0, numOranges = 0;
+            
+            //iterate through apples
+            foreach(int apple in apples)
+            {
+                //If apple starting point + distance, is between the left and right sides of the house, increase number of apples that hit the house
+                if( (a+apple)>=s && (a+apple)<= t)
+                {
+                    numApples++;
+                }
+            }
+            
+            //iterate through oranges
+            foreach(int orange in oranges)
+            {
+                //If orange starting point + distance, is between the left and right sides of the house, increase number of oranges that hit the house
+                if( (b+orange)<=t && (b+orange)>=s)
+                {
+                    numOranges++;
+                }
+            }
+            
+            //Print out total apples and oranges that hit
+            Console.WriteLine(numApples);
+            Console.WriteLine(numOranges);
+    }
