@@ -1,0 +1,23 @@
+public static string kangaroo(int x1, int v1, int x2, int v2)
+    {
+        //Because the 2nd kangaroo always starts ahead, if kangaroo2 is faster, kangaroo1 will never catch up
+        if(v2 < v1)
+        {
+            
+            //Get the starting distance between the kangaroos
+            int distanceToClose = x2 - x1;
+            //Get the difference in speeds
+            int speedDif = v2 - v1;
+            //If there is any remainder when you divide distance by speed, then the kangaroos do not land exactly on each other
+            if(distanceToClose % speedDif != 0)
+            {
+                return "NO";
+            }
+            else
+            {
+                return "YES";
+            }
+        }
+        return "NO";
+        
+    }
