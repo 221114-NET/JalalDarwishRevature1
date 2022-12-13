@@ -1,0 +1,26 @@
+public static int migratoryBirds(List<int> arr)
+    {
+        //Create a dictionary to hold the counts for each bird type
+       Dictionary<int, int> birdCountDict = new Dictionary<int, int>();
+       birdCountDict.Add(1, 0);
+       birdCountDict.Add(2, 0);
+       birdCountDict.Add(3, 0);
+       birdCountDict.Add(4, 0);
+       birdCountDict.Add(5, 0);
+       //Populate the dictionary with the counts for each type(key)
+       foreach(int bird in arr)
+       {
+           birdCountDict[bird] += 1;
+       }
+       //Compare the counts(value) for each type(key), and store the LOWEST type for return
+       int max = birdCountDict[5], highestType = 5;
+       for(int i=4; i>=1; --i)
+       {
+           if(max <= birdCountDict[i])
+           {
+               max =  birdCountDict[i];
+               highestType = i;
+           }
+       }
+       return highestType;
+    }
