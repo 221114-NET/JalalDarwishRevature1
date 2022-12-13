@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="title_image">
+        <img src="template.png" alt="an image of an html page" height="200vh" border="5px">
+    </div>
+    <div id="About_section">
+        <h1>About</h1>
+        <p>Some text about the website.</p>
+    </div>
+    <div id="whitespace_jank">
+        <br>
+        <br>
+    </div>
+    <div id="location_tables">
+        <h2>Our Locations</h2>
+        <ul>
+            <li>USA</li>
+            <ul>
+                <a href="">
+                    <li>New York</li>
+                </a>
+                <a href="">
+                    <li>Columbus</li>
+                </a>
+                <a href="">
+                    <li>Austin</li>
+                </a>
+                <a href="">
+                    <li>Philly</li>
+                </a>
+            </ul>
+            <li>World</li>
+            <ul>
+                <a href="">
+                    <li>Ottawa</li>
+                </a>
+                <a href="">
+                    <li>Sydney</li>
+                </a>
+            </ul>
+        </ul>
+    </div>
+    <div id="classes_table">
+        <h3>Upcoming Classes</h3>
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>Topic</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>New York</td>
+                    <td>Javascript & jQuery</td>
+                </tr>
+                <tr>
+                    <td>San Francisco</td>
+                    <td>HTML & CSS</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="Sign_up_forms">
+        <div id="Text_input_forms">
+            <form method="get">
+                <label>Name:
+                    <Input type="text"></Input>
+                </label>
+            </form>
+            <form method="get">
+                <label>Email:
+                    <Input type="email"></Input>
+                </label>
+            </form>
+        </div>
+        <div id="Location_dropdown">
+            <form method="get">
+                <label>Location:
+                    <select name="location_select" id="location_selection">
+                        <option value="SanFran">San Francisco</option>
+                        <option value="HTown">Houston</option>
+                    </select>
+                </label>
+            </form>
+        </div>
+        <div id="Gender_radio_button">
+            <form action="/gen_rad.php">
+                <fieldset>
+                    <legend>Gender:</legend>
+                    <input type="radio" name="Female" id="fem">
+                    <label for="fem">Female:</label>
+                    <input type="radio" name="Male" id="male">
+                    <label for="male">Female:</label>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
