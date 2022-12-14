@@ -1,0 +1,28 @@
+public static int sockMerchant(int n, List<int> ar)
+    {
+        //Initialize a dictionary to hold all the sock types and count the number of socks
+        Dictionary<int, int> sockPairs = new Dictionary<int, int>();
+        
+        //Add each sock color as a key to the dictionary if it isnt already there, increment it number of socks if the key does exist already
+        foreach(int sock in ar)
+        {
+            if(!sockPairs.ContainsKey(sock))
+            {
+                sockPairs.Add(sock, 1);
+            }
+            else
+            {
+                sockPairs[sock] += 1;
+            }
+        }
+        
+        //Variable to store total number of pairs
+        int totalPairs = 0;
+        //Iterate through the dictionary, do integer division on the sock color counts to get the number of pairs, and accumulate into totalPairs
+        foreach(KeyValuePair<int, int> pair in sockPairs)
+        {
+            totalPairs += pair.Value/2;
+        }
+        
+        return totalPairs;
+    }
