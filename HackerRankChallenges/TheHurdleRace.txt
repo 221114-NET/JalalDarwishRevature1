@@ -1,0 +1,16 @@
+public static int hurdleRace(int k, List<int> height)
+    {
+        //Variable for storing max height of hurdles
+        int max = 0;
+        //Loop through hurdle array and store maximum height
+        foreach(int h in height)
+        {
+            if(h > max) max = h;
+        }
+        //If the difference between max hurdle height, and jump height, is positive, return the difference(number of doses) otherwise return 0 doses
+        if(max - k > 0)
+        {
+            return max-k;
+        }
+        else return 0;
+    }
